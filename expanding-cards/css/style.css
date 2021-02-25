@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+section.card__img1 {
+	background-image: url(../img/kyle-glenn.jpg);
+}
+section.card__img2 {
+	background-image: url(../img/sergei-akulich.jpg);
+}
+section.card__img3 {
+	background-image: url(../img/gaddafi-rusli.jpg);
+}
+section.card__img4 {
+	background-image: url(../img/nemuel-sereti.jpg);
+}
+section.card__img5 {
+	background-image: url(../img/tyler-casey.jpg);
+}
+
+.container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+}
+.card {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 80vh;
+	border-radius: 3.125rem;
+	cursor: pointer;
+	flex: 0.5;
+	margin: 0.625rem;
+	position: relative;
+	transition: flex 0.7s ease-in;
+}
+.card__title {
+	color: white;
+	font-size: 1.5rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 1.25rem;
+	margin: 0;
+	opacity: 0;
+}
+.card__active {
+	flex: 5;
+}
+.card__active .card__title {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: 100vw;
+	}
+	.card:nth-of-type(4),
+	.card:nth-of-type(5) {
+		display: none;
+	}
+}
