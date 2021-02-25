@@ -1,3 +1,4 @@
 # 50 Projects
 
-[] Expanding Cards
+[X] Expanding Cards
+[] Progress Steps

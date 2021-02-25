@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+	--line-border-fill: #3498db;
+	--line-border-empty: #e0e0e0;
+}
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #f6f7fb;
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.container {
+	text-align: center;
+}
+.progress__container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 1.875rem;
+	max-width: 100%;
+	width: 21.875rem;
+}
+.progress__container::before {
+	content: '';
+	background-color: var(--line-border-empty);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 0.25rem;
+	width: 100%;
+	z-index: -1;
+}
+.progress__bar {
+	background-color: var(--line-border-fill);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 0.25rem;
+	width: 0%;
+	z-index: -1;
+	transition: 0.4s ease;
+}
+.progress__circle {
+	background-color: #fff;
+	color: #999;
+	border-radius: 50%;
+	height: 1.875rem;
+	width: 1.875rem;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid var(--line-border-empty);
+	transition: 0.4s ease;
+}
+.progress__circle--active {
+	border-color: var(--line-border-fill);
+}
+.progress__btn {
+	background-color: var(--line-border-fill);
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-family: inherit;
+	padding: 0.5rem 1.875rem;
+	margin: 0.32rem;
+	font-size: 0.875rem;
+}
+.progress__btn:active {
+	transform: scale(0.98);
+}
+.progress__btn:focus {
+	outline: none;
+}
+.progress__btn:disabled {
+	background-color: var(--line-border-empty);
+	cursor: not-allowed;
+}
