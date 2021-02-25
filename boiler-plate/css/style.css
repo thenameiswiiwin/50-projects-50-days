@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	height: 100vh; /* Body does not have height. Let body take up 100vh so it can center */
+	overflow: hidden; /* Hidden ==> Don't want scroll bar to show by default */
+	margin: 0;
+	border: 2px solid black;
+}
