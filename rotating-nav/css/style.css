@@ -1,0 +1,143 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: #333;
+	color: #222;
+	overflow-x: hidden; /* Hide Scrollbar on X-axis */
+	margin: 0;
+}
+
+.container {
+	background-color: #fafafa;
+	transform-origin: top left;
+	transition: transform 0.5s linear;
+	width: 100vw;
+	min-height: 100vh;
+	padding: 3.125em;
+}
+.container.show-nav {
+	transform: rotate(-20deg);
+}
+.container.show-nav + nav li {
+	transform: translateX(0);
+	transition-delay: 0.3s;
+}
+.container.show-nav .circle__content {
+	transform: rotate(-70deg);
+}
+
+.circle__container {
+	position: fixed;
+	top: -6.25em;
+	left: -6.25em;
+	/* Make Half of Circle Content Off the Screen. Half of Circle__Content Height / Width */
+}
+.circle__content {
+	background-color:#ff7979;
+	height: 12.5em;
+	width: 12.5em;
+	border-radius: 50%;
+	position: relative; /* Position relative so can position button in side the Absolute */
+	transition: transform 0.5s linear;
+}
+.circle__content button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 3.5em;
+	background: transparent;
+	border: 0;
+	font-size: 1.625rem;
+	color: #fff;
+}
+.circle__content button:focus {
+	outline: none;
+}
+.circle__content button#open {
+	left: 60%;
+}
+.circle__content button#close {
+	top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.content {
+	max-width: 62.5em;
+	margin: 3.125em auto;
+	flex-flow: column nowrap;
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	text-align: center;
+}
+.content h1 {
+	margin: 0;
+}
+.content small {
+	color: #555;
+	font-style: italic;
+}
+.content p {
+	color: #333;
+	line-height: 1.5;
+}
+.content img {
+	max-width: 100%;
+	height: 20em;
+	/* margin: 0 auto; */
+}
+
+nav {
+	position: fixed;
+	bottom: 2.5em;
+	left: 0;
+	z-index: 100;
+}
+nav ul {
+	list-style-type: none;
+	padding-left: 1.875em;
+}
+nav ul li {
+	text-transform: uppercase;
+	color: #fff;
+	margin: 2.5em 0;
+	transform: translateX(-100%);
+	transition: transform 0.4s ease-in;
+}
+nav ul li + li {
+	margin-left: 2em;
+	transform: translateX(-150%);
+}
+nav ul li + li + li {
+	margin-left: 4em;
+	transform: translateX(-200%);
+}
+nav ul li i {
+	font-size: 1.25rem;
+	margin-right: .625em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
