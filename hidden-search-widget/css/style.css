@@ -1,0 +1,57 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-image: linear-gradient(90deg, #e0ffcd, #ffcab0);
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.search {
+	position: absolute; /* Position things inside of it */
+	height: 3.125em;
+}
+.search__input {
+	background-color: #fff;
+	border: 0;
+	font-size: 1.125rem;
+	padding: 1em;
+	height: 2.875em;
+	width: 2.875em;
+	transition: width 0.3s ease; /* Input get wider */
+}
+.search__btn {
+	background-color: #fff;
+	border: 0;
+	cursor: pointer;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2.15em;
+	width: 2.15em;
+	transition: transform 0.3s ease; /* Button get push over right */
+}
+.search__btn:focus,
+.search__input:focus {
+	outline: none;
+}
+.search.active .search__input {
+	width: 12.5em;
+}
+.search.active .search__btn {
+	transform: translateX(198px);
+}

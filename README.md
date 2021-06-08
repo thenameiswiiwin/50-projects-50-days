@@ -6,8 +6,8 @@
 
 [X] Expanding Cards
 [X] Progress Steps
-[] Rotating Nav
-[] Hidden Search Widget
+[X] Rotating Nav
+[X] Hidden Search Widget
 [] Blurry Loading
 [] Scroll Animation
 [] Split Landing Page
