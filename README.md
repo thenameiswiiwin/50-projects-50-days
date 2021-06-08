@@ -3,12 +3,12 @@
 ## TODO
 
 ###
-
+```
 [X] Expanding Cards
 [X] Progress Steps
 [X] Rotating Nav
 [X] Hidden Search Widget
-[] Blurry Loading
+[X] Blurry Loading
 [] Scroll Animation
 [] Split Landing Page
 [] Form Wave Animation
@@ -54,5 +54,5 @@
 [] Random Image Feed
 [] Todo List
 [] Insect Catch Game
-
+```
 ###

@@ -1,0 +1,35 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.background__blur {
+	background: url('/images/damon-lam.jpg') no-repeat center center/cover;
+	position: absolute;
+	top: -1.875em;
+	left: -1.875em;
+	width: calc(100vw + 3.75em);
+	height: calc(100vh  + 3.75em);
+	z-index: -1;
+	filter: blur(0px);
+}
+
+.loading__text {
+	font-size: 3.125rem;
+	color: #fff;
+}
