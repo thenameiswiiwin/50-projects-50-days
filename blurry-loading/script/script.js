@@ -5,7 +5,7 @@ let load = 0;
 let interval = setInterval(blurring, 30);
 
 function scale(number, inMin, inMax, outMin, outMax) {
-  return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+  return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
 function blurring() {

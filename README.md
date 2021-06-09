@@ -9,7 +9,7 @@
 [X] Rotating Nav
 [X] Hidden Search Widget
 [X] Blurry Loading
-[] Scroll Animation
+[X] Scroll Animation
 [] Split Landing Page
 [] Form Wave Animation
 [] Sound Board
