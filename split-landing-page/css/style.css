@@ -1,0 +1,138 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:root {
+	--clr-bg-left: rgba(87, 84, 236, 0.7);
+  --clr-bg-right: rgba(43, 43, 43, 0.8);
+  --clr-btn-hover-left: rgba(87, 84, 236, 1);
+  --clr-btn-hover-right: rgba(28, 122, 28, 1);
+  --width-hover: 75%;
+  --width-secondary: 25%;
+  --speed: 1000ms;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.container {
+	position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+/* BUTTON */
+.btn {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 50%;
+	top: 40%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	color: #fff;
+	border: #fff solid 0.2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 15em;
+	padding: 1.5em;
+}
+.split__left .btn:hover {
+	background-color: var(--clr-btn-hover-left);
+	border-color: var(--clr-btn-hover-left);
+}
+.split__right .btn:hover {
+	background-color: var(--clr-btn-hover-right);
+	border-color: var(--clr-btn-hover-right);
+}
+
+/* SPLIT */
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+.split__left {
+	left: 0;
+	background: url('/images/ps5.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.split__left::before {
+	/* Overlay */
+	content: ''; /* Using Before / After, have to use content property */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--clr-bg-left);
+}
+.split__right {
+	right: 0;
+	background: url('/images/xboxX.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.split__right::before {
+	/* Overlay */
+	content: ''; /* Using Before / After, have to use content property */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--clr-bg-right);
+}
+.split__left,
+.split__right,
+.split__left::before,
+.split__right::before {
+	transition: all var(--speed) ease-in-out;
+}
+
+/* HOVER */
+.hover__left .split__left {
+	width: var(--width-hover);
+}
+.hover__left .split__right {
+	width: var(--width-secondary);
+}
+.hover__right .split__right {
+	width: var(--width-hover);
+}
+.hover__right .split__left {
+	width: var(--width-secondary);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+	h1 {
+		font-size: 2rem;
+		top: 30%;
+	}
+
+	.btn {
+		padding: 1.2em;
+		width: 12em;
+	}
+}

@@ -10,7 +10,7 @@
 [X] Hidden Search Widget
 [X] Blurry Loading
 [X] Scroll Animation
-[] Split Landing Page
+[X] Split Landing Page
 [] Form Wave Animation
 [] Sound Board
 [] Dad Jokes
